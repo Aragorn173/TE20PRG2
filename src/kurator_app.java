@@ -13,7 +13,7 @@ public class kurator_app {
         String g = "Therapist: Tänk dig!";
         String h = "Therapist: Nej!";
         String j = "Therapist: Ja!";
-        String k = "Therapist: Gå och dö!";
+        String k = "Therapist: Gå härifrån, försvinn!";
         String l = "Therapist: Usch!";
         String m = "Therapist: är du dum eller?";
         String n = "Agel: Japaneser!";
