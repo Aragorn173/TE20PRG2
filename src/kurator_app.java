@@ -15,7 +15,7 @@ public class kurator_app {
         String j = "Therapist: Ja!";
         String k = "Therapist: Gå och dö!";
         String l = "Therapist: Usch!";
-        String m = "Therapist: är du dum eller?!";
+        String m = "Therapist: är du dum eller?";
         String n = "Agel: Japaneser!";
         String o = "Föräldrar: Vi älskar dig inte";
         String p = "Therapist: Skynda på jag slutar snart";
@@ -66,7 +66,8 @@ public class kurator_app {
             Scanner scan = new Scanner(System.in);
             String input = scan.nextLine();
             respons = (int) (Math.random() * 15);
-            System.out.println("Therapisten gick iväg");
+
         }
+        System.out.println("Therapisten gick iväg");
     }
 }
