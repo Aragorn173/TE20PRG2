@@ -17,7 +17,7 @@ public class kurator_app {
         String l = "Therapist: Usch!";
         String m = "Therapist: är du dum eller?!";
         String n = "Agel: Japaneser!";
-        String o = "Mamma: Jag älskar dig inte";
+        String o = "Föräldrar: Vi älskar dig inte";
         String p = "Therapist: Skynda på jag slutar snart";
         String q = "Therapist: jaha";
 
