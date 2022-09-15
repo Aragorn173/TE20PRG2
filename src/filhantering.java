@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 import static java.awt.SystemColor.text;
-
+/*
 public class filhantering {
     public static void main(String[] args) {
         String filnamn = "info.txt";
@@ -33,3 +33,4 @@ public class filhantering {
         }
     }
 }
+*/
