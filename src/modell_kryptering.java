@@ -22,6 +22,8 @@ class Filereading {
         int m;
         int k = '(';
         String krypt = "";
+        String hex = "";
+        String result = new String();
 
 
         FileReader file = new FileReader("info.txt");
@@ -39,9 +41,17 @@ class Filereading {
 
         for (int i = 0; i < message.length(); i++) {
             m = message.charAt(i);
-            krypt += encrypt(m,k);
+            hex = Integer.toHexString(encrypt(k,m));
+            krypt += hex;
+        }
+        char[] charArray = krypt.toCharArray();
+        for(int i = 0; i < charArray.length; i=i+2) {
+            String st = ""+charArray[i]+""+charArray[i+1];
+            char ch = (char)Integer.parseInt(st, 16);
+            result = result + ch;
         }
         System.out.println(krypt);
+        System.out.println(result);
     }
 
     private static int encrypt(int m, int k) {
