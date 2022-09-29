@@ -1,19 +1,8 @@
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class modell_kryptering {
-    public static void main(String[] args) {
-        int c;
-        int a = 647766;
-        int key = '(';
-        c = a ^ key;
-        System.out.println(c);
-    }
-
-}
 
 class Filereading {
 
