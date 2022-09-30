@@ -1,3 +1,6 @@
+import jdk.nashorn.internal.ir.IfNode;
+
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,19 +17,29 @@ class Filereading {
         String hex = "";
         String result = new String();
 
-
-        FileReader file = new FileReader("info.txt");
-
-        BufferedReader bufferedreader = new BufferedReader(file);
-        String line = "";
-        Scanner scanner = new Scanner(bufferedreader);
-
-        while (scanner.hasNextLine()) {
-            //System.out.println(scanner.nextLine());
-            message = message + scanner.nextLine();
+        int key = JOptionPane.showConfirmDialog(null, "vill du skriva din egen nyckel?");
+        if (key == 0) {
+            k = Integer.parseInt(JOptionPane.showInputDialog("nyckel?"));
         }
-        bufferedreader.close();
-        System.out.println(message);
+
+        int välj = JOptionPane.showConfirmDialog(null, "vill du läsa från fil");
+        if (välj == 0) {
+            FileReader file = new FileReader("info.txt");
+
+
+            BufferedReader bufferedreader = new BufferedReader(file);
+            Scanner scanner = new Scanner(bufferedreader);
+
+            while (scanner.hasNextLine()) {
+                //System.out.println(scanner.nextLine());
+                message = message + scanner.nextLine();
+            }
+            bufferedreader.close();
+            System.out.println(message);
+        } else if (välj == 1) {
+            message = JOptionPane.showInputDialog("vad vill du kryptera?");
+            System.out.println(message);
+        }
 
         for (int i = 0; i < message.length(); i++) {
             m = message.charAt(i);
