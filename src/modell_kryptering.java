@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static java.lang.Integer.toHexString;
+
 
 class Filereading {
 
@@ -43,7 +45,7 @@ class Filereading {
 
         for (int i = 0; i < message.length(); i++) {
             m = message.charAt(i);
-            hex = Integer.toHexString(encrypt(k,m));
+            hex = toHexString(encrypt(k,m));
             krypt += hex;
         }
         char[] charArray = krypt.toCharArray();
